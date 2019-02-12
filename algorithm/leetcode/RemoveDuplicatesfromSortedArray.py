@@ -1,25 +1,15 @@
-test = [0,3,3,4,4,5,5,5,6,7]
+test = [7,1,5,3,6,4]
 
     
 class Solution:
-    def removeDuplicates(self, nums):
+    def maxProfit(self, prices):
         """
-        :type nums: List[int]
+        :type prices: List[int]
         :rtype: int
         """
-        if (nums.__len__() == 0):
-            return 0
-        
         index = 0
-        
-        for i in range(1, nums.__len__()):
-            if (nums[index] < nums[i]):
-                nums[index+1] = nums[i]
-                index=index+1
-        
-        return index+1
+        for i in range(prices.__len__()):
+            if (prices[i] > prices[index]):
+                
 
 
-
-print(Solution().removeDuplicates(test))
-print(test)
